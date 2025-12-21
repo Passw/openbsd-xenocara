@@ -81,6 +81,8 @@
 #define USE_VMX 1
 #endif
 
-#if defined(__sparc64__) || defined(__powerpc__)
+#include <endian.h>
+
+#if BYTE_ORDER == BIG_ENDIAN
 #define WORDS_BIGENDIAN 1
 #endif
